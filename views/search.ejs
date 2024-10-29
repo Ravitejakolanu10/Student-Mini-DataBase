@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searched Data</title>
+</head>
+<body>
+    <div>
+        <h1>Search Results for "<%= searchData %>"</h1>
+        <% if (resultData && resultData.length > 0) { %> 
+            <ul>
+                <% resultData.forEach(user => { %>
+                    <li>ID: <%= user.newid %> | Name: <%= user.firstname %> <%= user.lastname %></li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>Student Not Found</p>
+        <% } %>
+    </div>
+</body>
+</html>
